@@ -11,4 +11,11 @@
 #  updated_at :datetime         not null
 #
 class Director < ApplicationRecord
+
+  def filmography
+    matching_movies = Director.where({ :id => self.id})
+    return matching_movies
+  end
+
+
 end
